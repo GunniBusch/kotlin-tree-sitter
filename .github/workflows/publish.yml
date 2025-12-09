@@ -134,7 +134,7 @@ jobs:
             gradle/libs.versions.toml
             gradle/wrapper/gradle-wrapper.properties
       - name: Set up cross compilation
-        run: sudo apt-get install -qy {binutils,gcc}-aarch64-linux-gnu
+        run: sudo apt-get update && sudo apt-get install -qy {binutils,gcc}-aarch64-linux-gnu
         if: matrix.platform == 'Linux' || matrix.platform == 'common'
       - name: Restore Kotlin/Native prebuilt
         uses: actions/cache/restore@v4
