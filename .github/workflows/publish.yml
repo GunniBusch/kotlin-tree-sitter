@@ -3,6 +3,7 @@ name: Publish
 on:
   push:
     tags: ["*"]
+  workflow_dispatch:
 
 concurrency:
   cancel-in-progress: true
